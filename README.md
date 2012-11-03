@@ -1,11 +1,14 @@
 # PRML復々習レーン
 
-## 上巻 図5.3
+## chap5
+
+### 上巻 図5.3
 
 ```
-chap5/
+octave> cd chap5
+octave> run(1)
+octave> run(2)
+octave> run(3)
+octave> run(4)
 ```
-
-- `run(図表番号)`
-- 図表番号は1〜4
 
