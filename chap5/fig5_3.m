@@ -1,5 +1,5 @@
-function menu(type)
-  X = linspace(-1,1,50);
+function fig5_3(type)
+  X = linspace(-1,1,50)';
 
   eta = 0.05;
   epsilon = 1e-4;
@@ -25,7 +25,7 @@ function menu(type)
     case 3
       T = abs(X);
     case 4
-      T = X > 0; % Heaviside(X);
+      T = (X > 0)*1; % Heaviside(X);
     case 5
       T = (sin(X*3) + cos(X*7)) / 2;
       ymin = -1.0;
@@ -38,9 +38,11 @@ function menu(type)
 
   [W1, W2, iter] = nnlearn(1:50, T, eta, epsilon);
 
-  Y = zeros(1,50);
+  Y = zeros(50,1);
   for j = 1:50
-    Y(j) = nn(j, W1, W2);
+    IN = zeros(50,1);
+    IN(j) = 1;
+    Y(j) = nn(IN, W1, W2);
   endfor
 
   close all ; clc
