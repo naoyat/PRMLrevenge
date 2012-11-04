@@ -1,9 +1,11 @@
-function myplot(X, T, Y, ymin, ymax, msg)
+function myplot(X, T, Y, msg)
   hold on
   clc;
-  axis([-1, 1, ymin-0.1, ymax+0.1]);
+  ymin = min(Y) - 0.1;
+  ymax = max(Y) + 0.1;
+  axis([-1, 1, ymin, ymax]);
   scatter(X, T, 'b');
   plot(X, Y, 'r');
-  text(-0.95, 1.02, msg);
+  text(-0.95, ymax-0.095, msg);
   hold off
 end
