@@ -1,14 +1,6 @@
 # PRML復々習レーン
 
-## chap5
+## chap5: 第5章 ニューラルネットワーク
 
-### 上巻 図5.3
-
-```
-octave> cd chap5
-octave> run(1)
-octave> run(2)
-octave> run(3)
-octave> run(4)
-```
+- 図5.3を再現してみた
 
