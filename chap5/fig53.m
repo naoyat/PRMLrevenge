@@ -33,7 +33,8 @@ function fig53(type)
 
   expr = exprs(type,:);
 
-  [W1, W2, iter] = nnlearn(1:50, T, eta, epsilon);
+  I = eye(50);
+  [W1, W2, iter] = nnlearn(I, T, eta, epsilon);
 
   Y = zeros(50,1);
   for j = 1:50
