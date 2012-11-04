@@ -1,19 +1,14 @@
-function myplot(X, T, Y, msg)
+function myplot(X, T, Y, msgs)
   hold on
   clc;
 
   ymin = min(T) - 0.1;
-%  if ymin < -1
-%    ymin = -1
-%  endif
   ymax = max(T) + 0.1;
-%  if ymax > 1
-%    ymax = 1
-%  endif
   axis([-1, 1, ymin, ymax]);
 
   scatter(X, T, 'b');
   plot(X, Y, 'r');
-  text(-0.95, ymax-0.095, msg);
+  text(-0.95, ymax-0.065, msgs(1,:));
+  text(-0.95, ymax-0.105, msgs(2,:));
   hold off
 end

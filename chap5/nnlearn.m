@@ -8,7 +8,7 @@ function [W1, W2, iter] = nnlearn(Xs, Ts, Eta, Epsilon)
   W1 = rand(3, M+1)/10;  % 3x(M+1)
   W2 = rand(1, 3+1)/10;  % kx(3+1)
 
-  for i = 1:1000
+  for i = 1:500
     DTotal = 0;
     for j = 1:N
       X = Xs(:,j);  % Mx1

@@ -44,6 +44,6 @@ function fig53(type)
   endfor
 
   close all ; clc
-  msg = sprintf("%s; iteration# until E(x) < %g: %d", expr, epsilon, iter);
-  myplot(X, T, Y, msg, iter);
+  msgs = [expr; sprintf("iteration# until E(x) < %g: %d", epsilon, iter)];
+  myplot(X, T, Y, msgs, iter);
 end
