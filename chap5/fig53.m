@@ -1,4 +1,4 @@
-function fig5_3(type)
+function fig53(type)
   X = linspace(-1,1,50)';
 
   % 学習率
