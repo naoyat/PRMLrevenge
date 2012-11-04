@@ -25,7 +25,7 @@ function run(type)
     case 3
       T = abs(X);
     case 4
-      T = Heaviside(X);
+      T = X > 0; % Heaviside(X);
     case 5
       T = (sin(X*3) + cos(X*7)) / 2;
       ymin = -1.0;
