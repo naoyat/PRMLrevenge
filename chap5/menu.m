@@ -1,4 +1,4 @@
-function run(type)
+function menu(type)
   X = linspace(-1,1,50);
 
   eta = 0.05;
